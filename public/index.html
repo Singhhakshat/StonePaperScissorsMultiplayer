@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index-style.css">
+    <title>StonePaperScissors</title>
+    <script src="https://cdn.socket.io/4.0.1/socket.io.js"></script>
+    <script src="./js/script.js"></script>
+</head>
+<body>
+    <div id="data">
+      <form>
+        <div>
+          <label for="username">Username</label>
+          <input type="text" name="username" id="u-name" placeholder="Enter Username" required>
+        </div>
+        <div id="submit-button" onclick="start()">Join Game!</div>
+      </form>
+    </div>
+    <div id="container" style="display: none;">
+        <div id="info">
+            <p id="round">round number</p>
+        </div>
+        <hr>
+        <div id="opt">
+            <button id="stone"><img src="./media/rock.jpeg" alt="rock"></button>
+            <button id="paper"><img src="./media/paper.jpeg" alt="paper"></button>
+            <button id="scissors"><img src="./media/scissors.jpeg" alt="scissors"></button>
+        </div>
+        <hr>
+        <div id="select">
+            <button id="opponent">playing against </button>
+        </div>
+    </div>
+</body>
+</html>

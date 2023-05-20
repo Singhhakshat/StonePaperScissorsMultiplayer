@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Document</title>
+    <script src="./js/app.js"></script>
+    <script src="https://cdn.socket.io/4.0.1/socket.io.js"></script>
+    <script src="./js/script.js"></script>
+</head>
+<style>
+    body {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    #message-container {
+      width: 80%;
+      max-width: 1200px;
+    }
+
+    #message-container div {
+      background-color: #CCC;
+      padding: 5px;
+    }
+
+    #message-container div:nth-child(2n) {
+      background-color: #FFF;
+    }
+
+    #send-container {
+      position: fixed;
+      padding-bottom: 30px;
+      bottom: 0;
+      background-color: white;
+      max-width: 1200px;
+      width: 80%;
+      display: flex;
+    }
+
+    #message-input {
+      flex-grow: 1;
+    }
+</style>
+<body>
+  <div id="container" class="">
+    <div id="title">Rock <br> Paper <br> Scissors</div>
+    <div id="gameContainer" class="border flex">
+        <div id="startGame" class="pointer" onclick="startGame()">Start</div>
+        <div id="round" class="hidden"></div>
+        <div class="border horizontalRule hidden"></div>
+        <div id="playerSelect" class="hidden flex">
+            <button><img src="media/rock.jpeg" alt="rock" class="pointer imgSize" id="rockImage"></button>
+            <button><img src="media/paper.jpeg" alt="paper" class="pointer imgSize" id="paperImage"></button>
+            <button><img src="media/scissors.jpeg" alt="scissors" class="pointer imgSize" id="scissorsImage"></button>
+            <p class="purpleText">Click on your choice</p>
+        </div>
+        <div id="showCurrent" class="hidden">
+            <p id="you">You</p>
+            <img src="" alt="player choice" id="playerChoice" class="imgSize">
+            <p id="computer">Computer</p>
+            <img src="" alt="computer choice" id="computerChoice" class="imgSize">
+            
+            <p id="result" class="purpleText"></p>
+        </div>
+        <div class="border horizontalRule hidden"></div>
+        <div id="gameScore" class="flex hidden">
+            <div id="showScore" class="purpleText">
+                <p id="playerScore"></p>
+                <p id="computerScore"></p>
+            </div>
+            <div id="nextRound" class="border pointer" onclick="nextRound()">Next Round</div>
+        </div>
+    </div>
+    <div id="endGame" class="hidden flex">
+        <div id="finalScorePlayer"></div>
+        <div id="finalScoreComputer"></div>
+        <div id="finalScoreTies"></div>
+        <div class="border horizontalRule"></div>
+        <div id="finalText"></div>
+        <img src="" alt="" id="finalImage" class="imgSize">
+        <p class="greenText pointer border" onclick="window.location.reload()" id="restart">Click here to restart</p>
+    </div>
+</div>
+</body>
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="./styles/index-style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StonePaperScissors</title>
+</head>
+<body>
+  <div id="container">
+    <div id="title">Rock <br> Paper <br> Scissors</div>
+    <form id="form" action="game.html">
+      <div id="form-u">
+        <label for="username">Username</label>
+        <br>
+        <input type="text" name="username" id="u-name" placeholder="Enter Username" required>
+      </div>
+      <div id="form-r">
+      <label for="room">Room Name</label>
+      <br>
+        <input type="text" name="room" id="room" placeholder="Enter Room name" required>
+      </div>
+      <button type="submit">Join Game!</button>
+    </form>
+  </div>
+</body>
+</html> -->
