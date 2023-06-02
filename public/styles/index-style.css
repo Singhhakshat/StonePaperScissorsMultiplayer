@@ -2,6 +2,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    background-color: whitesmoke;
 }
 
 #container{
@@ -15,30 +16,38 @@
 }
 
 #data{
-    border: 2px solid black;
     padding: 20px;
-    
+    text-align: center;
+}
+#title{
+    font-size: 5rem;
+    text-align: center;
 }
 
 form{
     font-weight: 600;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
 
-form > div{
+form > div > p{
     margin: 10px;
 }
 
-form > input{
+form > div > input{
     font-weight: 600;
+    padding: 10px;
+    /* border-radius: 5px; */
+    border: none;
+    border-bottom: 2px solid black;
 }
 
 #submit-button{
     padding: 5px;
+    margin: 15px;
     background-color: aquamarine;
     font-weight: 600;
     border: 1px solid black;
@@ -93,4 +102,90 @@ img{
     margin-top:30px;
     margin-bottom: 30px;
     align-items: center;
+}
+#final-result{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#fr-text{
+    font-size: 2em;
+    padding: 10px;
+}
+#final-result > img{
+    width: 400px;
+}
+
+#final-result > button{
+    padding: 10px;
+    margin: 10px;
+    background-color: aquamarine;
+    font-weight: 600;
+}
+
+#round-result{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#r-res-text{
+    font-size: 2em;
+    padding: 10px;
+}
+#round-result > img{
+    width: 400px;
+}
+
+#round-result > button{
+    padding: 10px;
+    margin: 10px;
+    background-color: aquamarine;
+    font-weight: 600;
+}
+
+#round-img{
+    padding: 10px;
+}
+#playButton{
+    text-align: center;
+}
+
+#gradient-text{
+    font-size: smaller;
+    background: -webkit-linear-gradient(#dd1cb6, #e1ed05);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#playButton > button{
+    padding: 20px;
+    margin-top: 50px;
+    width: 20vw;
+    background-color: aquamarine;
+}
+
+#sp-link{
+    margin-top: 20px;
+}
+
+#sp-link > a{
+    padding: 10px;
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid black;
 }

@@ -11,13 +11,24 @@
 </head>
 <body>
     <div id="data">
-      <form>
+      <div id="title"><span style="color: brown;">Rock</span> <br> <span style="color: rgb(112, 187, 212)">Paper</span> <br> <span style="color: rgb(101, 232, 101)
+      ;">Scissors</span><br><span id="gradient-text">Multiplayer</span></div>
+      <form id="formm">
         <div>
-          <label for="username">Username</label>
+          <p>Username</p>
           <input type="text" name="username" id="u-name" placeholder="Enter Username" required>
+        </div>
+        <div>
+          <p>Room Name</p>
+          <input type="text" name="roomname" id="r-name" placeholder="Enter Room name" required>
         </div>
         <div id="submit-button" onclick="start()">Join Game!</div>
       </form>
+      <div id="playButton" style="display: none;">
+        <button onclick="play()" id="btn">Play!</button>
+      </div>
+      <div id="sp-link"><a href="https://singhhakshat.github.io/StonePaperScissors/">Try Singleplayer</a>
+    </div>
     </div>
     <div id="container" style="display: none;">
         <div id="info">
@@ -33,6 +44,19 @@
         <div id="select">
             <button id="opponent">playing against </button>
         </div>
+    </div>
+    <div id="round-result" style="display: none;">
+      <div id="round-img">
+        <img id="my-img" src="#" alt="My choice">
+        <img id="opp-img" src="#" alt="Opponent's choice">
+      </div>
+      <p id="r-res-text">Winner is </p>
+      <button onclick="nextRound()">Next Round</button>
+    </div>
+    <div id="final-result" style="display: none;">
+      <p id="fr-text">Winner is</p>
+      <img id="fr-img" src="" alt="Image">
+      <button id="restart-button" onclick="reset()">Restart</button>
     </div>
 </body>
 </html>
