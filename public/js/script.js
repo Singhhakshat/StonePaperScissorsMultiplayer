@@ -112,7 +112,7 @@
         document.getElementById('playButton').style.display = "block";
         document.getElementById('btn').disabled = true;
         document.getElementById('btn').innerHTML = 'waiting for other player..';
-        const socket = io('http://localhost:3000/'); // Replace with your server URL
+        const socket = io('https://spc-serv.onrender.com'); // Replace with your server URL
           
         socket.on('connect', () => {
           console.log('Connected to server');
