@@ -13,7 +13,7 @@
     //     document.getElementById('data').style.display = "none";
     //     container.style.display = "flex";
 
-    //     const socket = io('http://localhost:3000/'); // Replace with your server URL
+    //     const socket = io('https://spc-serv.onrender.com'); // Replace with your server URL
           
     //     socket.on('connect', () => {
     //       console.log('Connected to server');
